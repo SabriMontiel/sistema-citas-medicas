@@ -4,13 +4,13 @@ USE sistema_citas;
 
 
 CREATE TABLE Provincia (
-    id_provincia INT IDENTITY(1,1),
+    id_provincia INT,
     nombre_provincia VARCHAR(30) NOT NULL,
      CONSTRAINT PK_Provincial PRIMARY KEY (id_provincia)
 );
 
 CREATE TABLE Ciudad (
-    id_ciudad INT IDENTITY(1,1),
+    id_ciudad INT,
     nombre_ciudad VARCHAR(30) NOT NULL,
 	id_provincia INT not null,
      CONSTRAINT PK_Ciudad PRIMARY KEY (id_ciudad),
@@ -19,7 +19,7 @@ CREATE TABLE Ciudad (
 
 -- Tabla Localidad
 CREATE TABLE Localidad (
-    id_localidad INT IDENTITY(1,1),
+    id_localidad INT,
     nombre VARCHAR(100) NOT NULL,
 	cod_postal int not null,
 	id_ciudad int not null,
@@ -29,21 +29,21 @@ CREATE TABLE Localidad (
 
 --Tabla sexo
 CREATE TABLE Sexo (
-    id_sexo INT IDENTITY(1,1),
+    id_sexo INT,
     descripcion VARCHAR(50) NOT NULL,
      CONSTRAINT PK_sexo PRIMARY KEY (id_sexo)
 );
 
 --Tabla obra social
 CREATE TABLE Obra_social (
-    id_obra_social INT IDENTITY(1,1),
+    id_obra_social INT,
     descripcion VARCHAR(100) NOT NULL,
      CONSTRAINT PK_obraSocial PRIMARY KEY (id_obra_social)
 );
 
 --Tabla paciente
 CREATE TABLE Paciente (
-    id_paciente INT IDENTITY(1,1),
+    id_paciente INT,
     nombre VARCHAR(100) NOT NULL,
     apellido VARCHAR(100) NOT NULL,
     domicilio VARCHAR(255),
@@ -70,21 +70,21 @@ CREATE TABLE Paciente (
 
 CREATE TABLE Tratamiento
 (
-  id_tratamiento INT IDENTITY(1,1) NOT NULL,
+  id_tratamiento INT NOT NULL,
   descripcion VARCHAR(40) NOT NULL,
   CONSTRAINT PK_Tratamiento PRIMARY KEY (id_tratamiento)
 );
 
 CREATE TABLE Diagnostico
 (
-  id_diagnostico INT NOT NULL IDENTITY(1,1), 
+  id_diagnostico INT NOT NULL, 
   descripcion VARCHAR(40) NOT NULL,
   CONSTRAINT PK_Diagnostico PRIMARY KEY (id_diagnostico)
 );
 
 CREATE TABLE Atencion_medica_diagnostico
 (
-  id_diagnostico INT NOT NULL IDENTITY(1,1),
+  id_diagnostico INT NOT NULL,
   id_atencion_medica INT NOT NULL,
   CONSTRAINT PK_Atencion_medica_diagnostico PRIMARY KEY (id_diagnostico, id_atencion_medica),
   CONSTRAINT FK_Atencion_medica_diagnostico_REFERENCES_Diagnostico FOREIGN KEY (id_diagnostico) REFERENCES Diagnostico(id_diagnostico),
@@ -92,7 +92,7 @@ CREATE TABLE Atencion_medica_diagnostico
 );
 
 CREATE TABLE Profesional (
-    id_profesional INT IDENTITY(1,1),
+    id_profesional INT,
     nombre_profesional VARCHAR(30) NOT NULL,
 	apellido_profesional VARCHAR(30) NOT NULL,
 	lic_medica INT NOT NULL,
