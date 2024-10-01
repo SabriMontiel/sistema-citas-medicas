@@ -110,3 +110,26 @@ CREATE TABLE Asignacion_profesional_paciente (
 	CONSTRAINT FK_Asignacion_profesional_paciente_profesional FOREIGN KEY (id_profesional) REFERENCES Profesional(id_profesional)
 );
 
+CREATE TABLE Atencion_medica
+(
+  id_atencion_medica INT NOT NULL,
+  fecha_consulta DATE NOT NULL,
+  notas_observacion_ INT NOT NULL,
+  id_paciente INT NOT NULL,
+  id_profesional_ INT NOT NULL,
+  id_tratamiento INT NOT NULL,
+  CONSTRAINT PK_atencion_medica PRIMARY KEY (id_atencion_medica),
+  CONSTRAINT FK_Atencion_medica_Asignacion_profesional FOREIGN KEY (id_paciente, id_profesional_) REFERENCES Asignacion_profesional_paciente(id_paciente, 		id_profesional_),
+  CONSTRAINT FK_Atencion_medica_Tratamiento FOREIGN KEY (id_tratamiento) REFERENCES Tratamiento(id_tratamiento)
+);
+
+CREATE TABLE Ficha_Paciente
+(
+  id_paciente INT NOT NULL,
+  id_atencion_medica INT NOT NULL,
+  CONSTRAINT PK_Ficha_Paciente PRIMARY KEY (id_paciente, id_atencion_medica),
+  CONSTRAINT FK_Ficha_Paciente_Paciente FOREIGN KEY (id_paciente) REFERENCES Paciente(id_paciente),
+  CONSTRAINT FK_Ficha_Paciente_Atencion_Medica FOREIGN KEY (id_atencion_medica) REFERENCES Atencion_medica(id_atencion_medica)
+);
+
+
