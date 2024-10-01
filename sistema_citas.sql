@@ -57,3 +57,27 @@ CREATE TABLE Paciente (
 //CREATE TABLE PRUEBA(
 //);
 
+
+CREATE TABLE Tratamiento
+(
+  id_tratamiento INT NOT NULL,
+  descripcion VARCHAR(40) NOT NULL,
+  CONSTRAINT PK_Tratamiento PRIMARY KEY (id_tratamiento)
+);
+
+CREATE TABLE Diagnostico
+(
+  id_diagnostico INT NOT NULL IDENTITY(1,1), 
+  descripcion VARCHAR(40) NOT NULL,
+  CONSTRAINT PK_Diagnostico PRIMARY KEY (id_diagnostico)
+);
+
+CREATE TABLE Atencion_medica_diagnostico
+(
+  id_diagnostico INT NOT NULL IDENTITY(1,1),
+  id_atencion_medica INT NOT NULL,
+  CONSTRAINT PK_Atencion_medica_diagnostico PRIMARY KEY (id_diagnostico, id_atencion_medica),
+  CONSTRAINT FK_Atencion_medica_diagnostico_REFERENCES_Diagnostico FOREIGN KEY (id_diagnostico) REFERENCES Diagnostico(id_diagnostico),
+  CONSTRAINT FK_Atencion_medica_diagnostico_REFERENCES_Atencion_medica FOREIGN KEY (id_atencion_medica) REFERENCES Atencion_medica(id_atencion_medica)
+);
+
