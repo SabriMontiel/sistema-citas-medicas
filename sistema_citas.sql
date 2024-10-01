@@ -53,3 +53,7 @@ CREATE TABLE Paciente (
     CONSTRAINT UK_paciente_telefono UNIQUE (telefono),
     CONSTRAINT UK_paciente_dni UNIQUE (dni)
 );
+
+CREATE TABLE PRUEBA(
+);
+
