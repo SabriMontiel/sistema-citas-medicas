@@ -52,7 +52,6 @@ CREATE TABLE Paciente (
     telefono VARCHAR(20),
     dni VARCHAR(20) UNIQUE NOT NULL, 
     id_localidad INT,
-    id_cod_postal INT,
     id_sexo INT,
     id_obra_social INT,
     CONSTRAINT PK_paciente PRIMARY KEY (id_paciente),
