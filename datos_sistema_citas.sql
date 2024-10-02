@@ -1,3 +1,4 @@
+
 USE sistema_citas;
 GO
 -- Lote de datos representativos--
@@ -25,13 +26,13 @@ VALUES
 
 --Tabla sexo
 INSERT INTO Sexo (id_sexo, descripcion) 
-VALUE
+VALUES
 (1,'FEMENINO'),
 (2, 'MASCULINO');
 GO
 --Tabla obra social
 INSERT INTO Obra_social (id_obra_social,descripcion )
-VALUE 
+VALUES 
 (1,'IOSCOR'),
 (2,'SANCOR SALUD'),
 (3, 'OSDE'),
@@ -41,13 +42,13 @@ VALUE
 GO
 --Tabla paciente
 INSERT INTO Paciente (id_paciente, nombre, apellido, domicilio, fecha_nacimiento, email, telefono, dni, id_localidad, id_sexo, id_obra_social)
-VALUE
+VALUES
 (1, 'Sabrina', 'Montiel','quintana 1276', '1997-08-07', 'sabri@gmail', 37941212, 12345, 2,1,4),
 (2, 'Maria', 'Gomez','9 de julio 123', '2000-03-04', 'maria@gmail', 37941234, 12456, 4,1,5),
 (3, 'Juana', 'Paez','salta 2345', '2003-12-17', 'juana@gmail', 37953344, 23445, 5,1,2),
 (4, 'Franco', 'Colapinto','catamarca 1456', '2003-06-27', 'franco@gmail', 3794099, 44567, 1,2,3),
 (5, 'Max', 'Verstappen','mendoza 2375', '1997-09-30', 'max@gmail', 37950505, 11111, 3,2,1),
-(6, 'Lewis', 'Hamilton',' Cordoba 1144', '1977-06-17', 'lewis@gmail', 379444, 44444, 2,2,6),
+(6, 'Lewis', 'Hamilton',' Cordoba 1144', '1977-06-17', 'lewis@gmail', 379444, 44444, 2,2,6);
 
 SELECT * FROM sexo;
 SELECT * FROM Obra_social;
@@ -62,7 +63,7 @@ INSERT INTO Profesional(id_profesional,nombre_profesional,apellido_profesional,l
 (5,'Matias','Esquivel',34542),
 (6,'Luz','Martinez',34542);
 
-INSERT INTO Asignancion_profesional_paciente (id_paciente,id_profesional,fecha_inicio,fecha_fin) VALUES
+INSERT INTO Asignacion_profesional_paciente(id_paciente,id_profesional,fecha_inicio,fecha_fin) VALUES
 (1,1,'2024-10-12','2024-12-04'),
 (2,2,'2022-08-12','2022-11-13'),
 (3,3,'2021-04-12','2021-8-23'),
@@ -71,7 +72,6 @@ INSERT INTO Asignancion_profesional_paciente (id_paciente,id_profesional,fecha_i
 (6,6,'2023-09-12','2024-04-17');
 
 
-//aca arriba de tratamiento deberia ir el resto
 
 INSERT INTO Tratamiento (descripcion) VALUES 
 ('Fisioterapia'),
@@ -100,7 +100,7 @@ INSERT INTO Atencion_medica_diagnostico (id_diagnostico, id_atencion_medica) VAL
 (6, 2);
 GO
 
-INSERT INTO Atencion_medica (id_atencion_medica, fecha_consulta, notas_observacion, id_paciente, id_profesional, id_tratamiento) VALUES
+INSERT INTO Atencion_medica (id_atencion_medica, fecha_consulta,notas_observacion_, id_paciente, id_profesional, id_tratamiento) VALUES
 (1, '2024-01-10', 'Paciente con dolor muscular en el brazo derecho.', 1, 1, 1),
 (2, '2024-02-14', 'Paciente con inflamación en la rodilla.', 2, 2, 2),
 (3, '2024-03-03', 'Paciente con fatiga crónica.', 3, 3, 3),
@@ -121,7 +121,3 @@ SELECT * FROM Tratamiento;
 SELECT * FROM Diagnostico;
 
 SELECT * FROM Atencion_medica_diagnostico;
-
-
-
-
