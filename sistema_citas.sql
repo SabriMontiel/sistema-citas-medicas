@@ -56,7 +56,7 @@ CREATE TABLE Paciente (
     id_sexo INT,
     id_obra_social INT,
     CONSTRAINT PK_paciente PRIMARY KEY (id_paciente),
-    CONSTRAINT FK_paciente_Ciudad FOREIGN KEY (id_localidad) REFERENCES Ciudad(id_ciudad),
+    CONSTRAINT FK_paciente_Localidad FOREIGN KEY (id_localidad) REFERENCES Localidad(id_localidad),
     CONSTRAINT PK_paciente_sexo FOREIGN KEY (id_sexo) REFERENCES Sexo(id_sexo),
     CONSTRAINT PK_paciente_obraSocial FOREIGN KEY (id_obra_social) REFERENCES Obra_social(id_obra_social),
     CONSTRAINT UK_paciente_email UNIQUE(email),
@@ -90,8 +90,8 @@ CREATE TABLE Profesional (
 );
 
 CREATE TABLE Asignacion_profesional_paciente (
-    id_paciente INT,
-	id_profesional INT,
+    id_paciente INT NOT NULL,
+	id_profesional INT NOT NULL,
     fecha_inicio DATE NOT NULL,
 	fecha_fin DATE NOT NULL,
     CONSTRAINT PK_Asignacion_Profesional_paciente PRIMARY KEY (id_paciente,id_profesional),
@@ -104,12 +104,12 @@ CREATE TABLE Atencion_medica
 (
   id_atencion_medica INT NOT NULL,
   fecha_consulta DATE NOT NULL,
-  notas_observacion_ INT NOT NULL,
+  notas_observacion_ VARCHAR(250) NOT NULL,
   id_paciente INT NOT NULL,
-  id_profesional_ INT NOT NULL,
+  id_profesional INT NOT NULL,
   id_tratamiento INT NOT NULL,
   CONSTRAINT PK_atencion_medica PRIMARY KEY (id_atencion_medica),
-  CONSTRAINT FK_Atencion_medica_Asignacion_profesional FOREIGN KEY (id_paciente, id_profesional_) REFERENCES Asignacion_profesional_paciente(id_paciente,id_profesional),
+  CONSTRAINT FK_Atencion_medica_Asignacion_profesional FOREIGN KEY (id_paciente, id_profesional) REFERENCES Asignacion_profesional_paciente(id_paciente,id_profesional),
   CONSTRAINT FK_Atencion_medica_Tratamiento FOREIGN KEY (id_tratamiento) REFERENCES Tratamiento(id_tratamiento)
 );
 
@@ -118,6 +118,7 @@ CREATE TABLE Atencion_medica_diagnostico
 (
   id_diagnostico INT NOT NULL,
   id_atencion_medica INT NOT NULL,
+  notas_observacion VARCHAR(250),
   CONSTRAINT PK_Atencion_medica_diagnostico PRIMARY KEY (id_diagnostico, id_atencion_medica),
   CONSTRAINT FK_Atencion_medica_diagnostico_REFERENCES_Diagnostico FOREIGN KEY (id_diagnostico) REFERENCES Diagnostico(id_diagnostico),
   CONSTRAINT FK_Atencion_medica_diagnostico_REFERENCES_Atencion_medica FOREIGN KEY (id_atencion_medica) REFERENCES Atencion_medica(id_atencion_medica)
