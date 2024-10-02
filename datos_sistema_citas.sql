@@ -1,6 +1,28 @@
 USE sistema_citas;
 GO
 -- Lote de datos representativos--
+
+--Tabla Provincia
+INSERT INTO Provincia (id_provincia,nombre_provincia)
+VALUES
+(1,'Corrientes'),
+(2,'Formosa'),
+(3,'Chaco'),
+(4,'Misiones'),
+(5,'Mendoza'),
+(6,'Buenos Aires');
+
+--Tabla Localidad
+INSERT INTO Localidad (id_localidad,nombre,cod_postal,id_provincia)
+VALUES
+(1,'Corrientes',3400,1),
+(2,'Formosa',3600,2),
+(3,'Resistencia',3500,3),
+(4,'Posadas',3300,4),
+(5,'Mendoza',5500,5),
+(6,'Ciudad Autonoma de Buenos Aires',1000,6);
+  
+
 --Tabla sexo
 INSERT INTO Sexo (id_sexo, descripcion) 
 VALUE
