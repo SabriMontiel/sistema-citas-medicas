@@ -54,6 +54,22 @@ SELECT * FROM Obra_social;
 SELECT * FROM Paciente;
 
 
+INSERT INTO Profesional(id_profesional,nombre_profesional,apellido_profesional,lic_medica) VALUES
+(1,'Jose','Ramirez',34542),
+(2,'Maria','Gonzalez',34542),
+(3,'Juan Pedro','Sanchez',34542),
+(4,'Silvina','Benitez',34542),
+(5,'Matias','Esquivel',34542),
+(6,'Luz','Martinez',34542);
+
+INSERT INTO Asignancion_profesional_paciente (id_paciente,id_profesional,fecha_inicio,fecha_fin) VALUES
+(1,1,'2024-10-12','2024-12-04'),
+(2,2,'2022-08-12','2022-11-13'),
+(3,3,'2021-04-12','2021-8-23'),
+(4,4,'2023-11-12','2024-06-15'),
+(5,5,'2024-03-12','2024-07-04'),
+(6,6,'2023-09-12','2024-04-17');
+
 
 //aca arriba de tratamiento deberia ir el resto
 
