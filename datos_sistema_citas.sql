@@ -33,7 +33,7 @@ SELECT * FROM Paciente;
 
 
 
-//aca arriba de  trataniento deberia ir el resto
+//aca arriba de tratamiento deberia ir el resto
 
 INSERT INTO Tratamiento (descripcion) VALUES 
 ('Fisioterapia'),
