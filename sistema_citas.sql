@@ -22,9 +22,9 @@ CREATE TABLE Localidad (
     id_localidad INT,
     nombre VARCHAR(100) NOT NULL,
 	cod_postal int not null,
-	id_ciudad int not null,
+	id_provincia int not null,
     CONSTRAINT PK_localidad PRIMARY KEY (id_localidad),
-	CONSTRAINT FK_Localidad_Ciudad FOREIGN KEY 
+CONSTRAINT FK_Localidad_Provincia FOREIGN KEY (id_provincia) REFERENCES Provincia(id_provincia)
 );
 
 --Tabla sexo
