@@ -57,11 +57,11 @@ SELECT * FROM Paciente;
 
 INSERT INTO Profesional(id_profesional,nombre_profesional,apellido_profesional,lic_medica) VALUES
 (1,'Jose','Ramirez',34542),
-(2,'Maria','Gonzalez',34542),
-(3,'Juan Pedro','Sanchez',34542),
-(4,'Silvina','Benitez',34542),
-(5,'Matias','Esquivel',34542),
-(6,'Luz','Martinez',34542);
+(2,'Maria','Gonzalez',74632),
+(3,'Juan Pedro','Sanchez',42312),
+(4,'Silvina','Benitez',48382),
+(5,'Matias','Esquivel',42341),
+(6,'Luz','Martinez',12342);
 
 INSERT INTO Asignacion_profesional_paciente(id_paciente,id_profesional,fecha_inicio,fecha_fin) VALUES
 (1,1,'2024-10-12','2024-12-04'),
