@@ -73,22 +73,22 @@ INSERT INTO Asignacion_profesional_paciente(id_paciente,id_profesional,fecha_ini
 
 
 
-INSERT INTO Tratamiento (descripcion) VALUES 
-('Fisioterapia'),
-('Terapia Ocupacional'),
-('Medicación'),
-('Psicoterapia'),
-('Rehabilitación Cardiaca'),
-('Acupuntura');
+INSERT INTO Tratamiento (id_tratamiento,descripcion) VALUES 
+(1,'Fisioterapia'),
+(2,'Terapia Ocupacional'),
+(3,'Medicación'),
+(4,'Psicoterapia'),
+(5,'Rehabilitación Cardiaca'),
+(6,'Acupuntura');
 GO
 
-INSERT INTO Diagnostico (descripcion) VALUES 
-('Lesión Muscular'),
-('Fractura'),
-('Esguince'),
-('Tendinitis'),
-('Artritis'),
-('Síndrome del túnel carpiano');
+INSERT INTO Diagnostico (id_diagnostico,descripcion) VALUES 
+(1,'Lesión Muscular'),
+(2,'Fractura'),
+(3,'Esguince'),
+(4,'Tendinitis'),
+(5,'Artritis'),
+(6,'Síndrome del túnel carpiano');
 GO
 
 INSERT INTO Atencion_medica_diagnostico (id_diagnostico, id_atencion_medica) VALUES 
