@@ -100,6 +100,22 @@ INSERT INTO Atencion_medica_diagnostico (id_diagnostico, id_atencion_medica) VAL
 (6, 2);
 GO
 
+INSERT INTO Atencion_medica (id_atencion_medica, fecha_consulta, notas_observacion, id_paciente, id_profesional, id_tratamiento) VALUES
+(1, '2024-01-10', 'Paciente con dolor muscular en el brazo derecho.', 1, 1, 1),
+(2, '2024-02-14', 'Paciente con inflamación en la rodilla.', 2, 2, 2),
+(3, '2024-03-03', 'Paciente con fatiga crónica.', 3, 3, 3),
+(4, '2024-04-22', 'Paciente con dolor en el cuello.', 4, 4, 4),
+(5, '2024-05-12', 'Paciente en rehabilitación por fractura de brazo.', 5, 5, 5),
+(6, '2024-06-07', 'Paciente con síndrome del túnel carpiano.', 6, 6, 6);
+
+INSERT INTO Ficha_Paciente (id_paciente, id_atencion_medica) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6);
+
 SELECT * FROM Tratamiento;
 
 SELECT * FROM Diagnostico;
