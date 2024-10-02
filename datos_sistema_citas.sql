@@ -30,3 +30,44 @@ VALUE
 SELECT * FROM sexo;
 SELECT * FROM Obra_social;
 SELECT * FROM Paciente;
+
+
+
+//aca aroba de  trataniento deberia ir el resto
+
+INSERT INTO Tratamiento (descripcion) VALUES 
+('Fisioterapia'),
+('Terapia Ocupacional'),
+('Medicación'),
+('Psicoterapia'),
+('Rehabilitación Cardiaca'),
+('Acupuntura');
+GO
+
+INSERT INTO Diagnostico (descripcion) VALUES 
+('Lesión Muscular'),
+('Fractura'),
+('Esguince'),
+('Tendinitis'),
+('Artritis'),
+('Síndrome del túnel carpiano');
+GO
+
+INSERT INTO Atencion_medica_diagnostico (id_diagnostico, id_atencion_medica) VALUES 
+(1, 1),
+(2, 1),
+(3, 2),
+(4, 2),
+(5, 1),
+(6, 2);
+GO
+
+SELECT * FROM Tratamiento;
+
+SELECT * FROM Diagnostico;
+
+SELECT * FROM Atencion_medica_diagnostico;
+
+
+
+
