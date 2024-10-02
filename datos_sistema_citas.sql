@@ -49,10 +49,6 @@ VALUES
 (5, 'Max', 'Verstappen','mendoza 2375', '1997-09-30', 'max@gmail', 37950505, 11111, 3,2,1),
 (6, 'Lewis', 'Hamilton',' Cordoba 1144', '1977-06-17', 'lewis@gmail', 379444, 44444, 2,2,6);
 
-SELECT * FROM sexo;
-SELECT * FROM Obra_social;
-SELECT * FROM Paciente;
-
 
 INSERT INTO Profesional(id_profesional,nombre_profesional,apellido_profesional,lic_medica) VALUES
 (1,'Jose','Ramirez',34542),
@@ -118,8 +114,15 @@ INSERT INTO Ficha_Paciente (id_paciente, id_atencion_medica) VALUES
 (5, 5),
 (6, 6);
 
+SELECT * FROM Provincia;
+SELECT * FROM Localidad;
+SELECT * FROM sexo;
+SELECT * FROM Obra_social;
+SELECT * FROM Paciente;
+SELECT * FROM Profesional;
+SELECT * FROM Asignacion_profesional_paciente;
 SELECT * FROM Tratamiento;
-
 SELECT * FROM Diagnostico;
-
+SELECT * FROM Atencion_medica ;
 SELECT * FROM Atencion_medica_diagnostico;
+SELECT * FROM Ficha_Paciente ;
