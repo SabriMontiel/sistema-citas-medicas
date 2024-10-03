@@ -142,12 +142,12 @@ Para verificar el correcto funcionamiento de las inserciones y las relaciones en
 
 Los principales resultados del desarrollo fueron los siguientes:
 
-# ![][image4]
+![imagen1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/WhatsApp%20Image%202024-10-02%20at%2022.09.44.jpeg)
 
-![][image5]  
-![][image6]
+![imagen2](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/WhatsApp%20Image%202024-10-02%20at%2022.10.15.jpeg)
+![imagen3](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/WhatsApp%20Image%202024-10-02%20at%2022.10.52.jpeg)
 
-# ![][image7]
+![imagen4](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/WhatsApp%20Image%202024-10-02%20at%2022.11.15.jpeg)
 
 # CAPÍTULO V: CONCLUSIONES  
 
