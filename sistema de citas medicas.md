@@ -53,7 +53,7 @@
 
 # 
 
-# CAPÍTULO I: INTRODUCCIÓN   {#capítulo-i:-introducción}
+# CAPÍTULO I: INTRODUCCIÓN   
 
 Objetivos del Proyecto
 
@@ -96,7 +96,7 @@ En las últimas décadas, el sector salud ha experimentado profundas transformac
 
 La digitalización de estos procesos no solo mejora la eficiencia operativa de los centros de salud, sino que también promueve una atención más centrada en el paciente, al ofrecer mayor accesibilidad y comodidad.
 
-# CAPÍTULO III: METODOLOGÍA SEGUIDA {#capítulo-iii:-metodología-seguida}
+# CAPÍTULO III: METODOLOGÍA SEGUIDA 
 
 a. Descripción de cómo se realizó el Trabajo Práctico
 
@@ -153,7 +153,7 @@ Los principales resultados del desarrollo fueron los siguientes:
 
 # ![][image7]
 
-# CAPÍTULO V: CONCLUSIONES  {#capítulo-v:-conclusiones}
+# CAPÍTULO V: CONCLUSIONES  
 
 El sistema de gestión de citas médicas cumplió con los objetivos planteados, permitiendo la organización de citas, el almacenamiento seguro de la información de los pacientes y médicos, y el seguimiento de diagnósticos y tratamientos. La implementación del sistema permite mejorar la eficiencia en la gestión de las citas médicas, reduciendo los solapamientos y mejorando la organización de la información médica, lo que impacta directamente en la calidad de atención.
 
@@ -161,7 +161,7 @@ Algunos de los desafíos encontrados incluyeron la gestión de la integridad ref
 
 El sistema tiene un alto potencial de expansión, permitiendo en el futuro agregar funcionalidades como un historial médico completo y la integración con sistemas de telemedicina.
 
-# CAPÍTULO VI: BIBLIOGRAFÍA.  {#capítulo-vi:-bibliografía.}
+# CAPÍTULO VI: BIBLIOGRAFÍA. 
 
 1. Camuña Rodríguez, J. F. (2015). Lenguajes de definición y modificación de datos SQL (UF1472). Antequera, Málaga, Spain: IC Editorial.  
 2. Pulido Romero, E. Escobar Domínguez, Ó. y Núñez Pérez, J. Á. (2019). Base de datos. Ciudad de México, Grupo Editorial Patria.  
