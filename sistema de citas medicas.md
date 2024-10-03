@@ -112,7 +112,7 @@ El trabajo se realizó utilizando las siguientes herramientas y procedimientos:
 3. Mediante el ERDplus elaboramos un diagrama en el modelo relacional  a partir de especificaciones de los requerimientos que fueron surgiendo al plantear el problema en cuestión.   
 4. Se utilizó GitHub como plataforma de control de versiones y colaboración en equipo. GitHub permitió a los miembros del grupo compartir, revisar y fusionar sus partes del trabajo de manera eficiente.
 
-# CAPÍTULO IV: DESARROLLO DEL TEMA / PRESENTACIÓN DE RESULTADOS {#capítulo-iv:-desarrollo-del-tema-/-presentación-de-resultados}
+# CAPÍTULO IV: DESARROLLO DEL TEMA / PRESENTACIÓN DE RESULTADOS 
 
 Como se mencionó en el capítulo anterior, lo primero que decidimos implementar fue el diagrama en el modelo relacional a partir de especificaciones de requerimientos que fueron surgiendo a medida que investigamos las problemáticas que tienen los pacientes a la hora de tener que pedir citas médicas. Este fue el resultado del mismo:
 
