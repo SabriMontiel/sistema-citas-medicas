@@ -1,12 +1,8 @@
 
 
-![][image1] 
-
 **Universidad Nacional del Nordeste** 
 
    
-![][image2]
-
  
 
 **Facultad de Ciencias Exactas y Naturales y Agrimensura** 
