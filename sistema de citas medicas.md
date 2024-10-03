@@ -120,7 +120,7 @@ El trabajo se realizó utilizando las siguientes herramientas y procedimientos:
 
 Como se mencionó en el capítulo anterior, lo primero que decidimos implementar fue el diagrama en el modelo relacional a partir de especificaciones de requerimientos que fueron surgiendo a medida que investigamos las problemáticas que tienen los pacientes a la hora de tener que pedir citas médicas. Este fue el resultado del mismo:
 
-[imagen1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/doc/citas_medicas_DER.png)
+![imagen1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/doc/citas_medicas_DER.png)
 
 **Desarrollo del Sistema**
 
