@@ -177,7 +177,7 @@ Los roles son conjuntos de permisos que se pueden asignar a varios usuarios, fac
 * db\_datawriter: Permite modificar datos en las tablas.  
 * db\_securityadmin: Permite gestionar permisos y roles.
 
-Para ver el desarrollo practico del tema ir a: [scripts-> Tema_1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/Scrips/Manejo%20de%20permisos%20y%20roles%20.sql)
+Para ver el desarrollo practico del tema ir a: [Tema_1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/Scrips/Manejo%20de%20permisos%20y%20roles%20.sql)
 
 
 
