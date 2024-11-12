@@ -1,4 +1,4 @@
-﻿A continuación esta son las serie de pasos que hay que seguir para poder ver el resultado de los scripts, cabe aclarar que se debieron haber ejecutado todos los scripts anteriores 
+**﻿A continuación esta son las serie de pasos que hay que seguir para poder ver el resultado de los scripts, cabe aclarar que se debieron haber ejecutado todos los scripts anteriores** 
 
 1. **Carga Masiva de datos en la tabla paciente**
 
