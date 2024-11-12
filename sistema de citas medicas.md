@@ -149,6 +149,37 @@ Los principales resultados del desarrollo fueron los siguientes:
 
 ![imagen4](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/WhatsApp%20Image%202024-10-02%20at%2022.11.15.jpeg)
 
+Desarrollo TEMA 1 “Permisos a Nivel de Usuario”
+
+Los permisos a nivel de usuario son configuraciones en bases de datos que determinan qué acciones puede realizar cada usuario sobre los objetos de la base de datos, como por ejemplo tablas y procedimientos almacenados. Estos permisos son fundamentales para garantizar la seguridad y la integridad de los datos. Los usuarios pueden tener diferentes niveles de acceso según sus necesidades y roles en la organización.  
+Sentencias para Manejar Permisos
+
+Las principales sentencias SQL para manejar permisos son:
+
+* GRANT: Para otorgar permisos a un usuario o rol.  
+* REVOKE: Para quitar permisos previamente otorgados.  
+* DENY: Para denegar explícitamente permisos, lo que prevalece sobre permisos otorgados.
+
+Tipos de Permisos Más Comunes  
+Los permisos más comunes incluyen:
+
+* SELECT: Permite leer datos.  
+* INSERT: Permite agregar nuevos registros.  
+* UPDATE: Permite modificar registros existentes.  
+* DELETE: Permite eliminar registros.  
+* EXECUTE: Permite ejecutar procedimientos almacenados.
+
+Roles  
+Los roles son conjuntos de permisos que se pueden asignar a varios usuarios, facilitando la gestión de permisos. Algunos roles comunes son:
+
+* db\_owner: Control total sobre la base de datos.  
+* db\_datareader: Permite leer todas las tablas.  
+* db\_datawriter: Permite modificar datos en las tablas.  
+* db\_securityadmin: Permite gestionar permisos y roles.
+
+Para ver el desarrollo practico del tema ir a 
+
+
 # CAPÍTULO V: CONCLUSIONES  
 
 El sistema de gestión de citas médicas cumplió con los objetivos planteados, permitiendo la organización de citas, el almacenamiento seguro de la información de los pacientes y médicos, y el seguimiento de diagnósticos y tratamientos. La implementación del sistema permite mejorar la eficiencia en la gestión de las citas médicas, reduciendo los solapamientos y mejorando la organización de la información médica, lo que impacta directamente en la calidad de atención.
