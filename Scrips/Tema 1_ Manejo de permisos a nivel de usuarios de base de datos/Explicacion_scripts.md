@@ -165,7 +165,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 
 
-1. **Creación de Roles**:
+5. **Creación de Roles**:
    1. Se crean usuarios adicionales y un rol (**LecturaDiagnostico**) que permite solo la lectura en la tabla **Diagnostico**.
 
 `   `-- Crear usuario que tendrá permisos de lectura en la tabla Diagnostico
