@@ -209,10 +209,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
    1. El usuario con el rol **LecturaDiagnostico** puede leer datos de la tabla, mientras que el usuario sin ese permiso recibe un error al intentar hacerlo.
 
 ```sql
-     -- Consulta permitida para UsuarioConPermisoLectura sobre Diagnostico y no permitida para
-     --UsuarioSinPermisoLectura (deberia fallar para    
-
-     UsuarioSinPermisoLectura)
+     -- Consulta permitida para UsuarioConPermisoLectura sobre Diagnostico y no permitida para UsuarioSinPermisoLectura (deberia fallar para UsuarioSinPermisoLectura)
 
      SELECT \* FROM dbo.Diagnostico;
 ```
