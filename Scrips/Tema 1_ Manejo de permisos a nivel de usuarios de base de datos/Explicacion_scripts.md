@@ -42,6 +42,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
            CREATE LOGIN ConsultaMedica WITH PASSWORD = 'ConsultaPassword123';
 
            CREATE USER ConsultaMedica FOR LOGIN ConsultaMedica;
+       ```
 
 1. **Asignación de Permisos**:
    1. Al usuario **AdminMedico** se le otorgan permisos de administrador, como **db\_owner**.
@@ -49,6 +50,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
    
        ```sql
            ALTER ROLE db_owner ADD MEMBER AdminMedico;
+       ```
 
    1. Al usuario **ConsultaMedica** se le otorgan permisos de solo lectura sobre la tabla **Atencion\_medica** y permisos de ejecución sobre el procedimiento almacenado **sp\_InsertAtencionMedica**.
 
@@ -62,6 +64,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
            sp\_InsertAtencionMedica
 
            GRANT EXECUTE ON dbo.sp\_InsertAtencionMedica TO ConsultaMedica;
+       ```
 
 1. **Uso de Procedimientos Almacenados**:
    1. Se crea un procedimiento almacenado (**sp\_InsertAtencionMedica**) que permite insertar datos en la tabla **Atencion\_medica**.
