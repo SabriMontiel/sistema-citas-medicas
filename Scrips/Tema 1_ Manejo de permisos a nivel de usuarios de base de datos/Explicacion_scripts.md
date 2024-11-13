@@ -231,7 +231,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 
 
-- ![](Aspose.Words.84b45afb-0bab-4a8c-b99a-e5cfd64d0012.007.png)Usuario sin permiso:
+- ![imagen 7](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(5).png)Usuario sin permiso:
 
 ###
 ### **Conclusiones**
