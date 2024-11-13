@@ -1,4 +1,4 @@
-﻿### **Introducción**
+### **Introducción**
 #### **Permisos a Nivel de Usuario**
 Los **permisos a nivel de usuario** son configuraciones en bases de datos que determinan qué acciones puede realizar cada usuario sobre los objetos de la base de datos, como por ejemplo tablas y procedimientos almacenados. Estos permisos son fundamentales para garantizar la seguridad y la integridad de los datos. Los usuarios pueden tener diferentes niveles de acceso según sus necesidades y roles en la organización.
 #### **Sentencias para Manejar Permisos**
@@ -127,9 +127,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 `       `@id\_tratamiento = 1;       -- Fisioterapia
 
 
-
-Previo a hacer los intentos de inserciones:
-- ![imagen 1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(4).png)
+- ![imagen 1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(4).png)Previo a hacer los intentos de inserciones:
 
 
 
@@ -150,7 +148,36 @@ Previo a hacer los intentos de inserciones:
 
 ![imagen 4](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(7).png)
 
+
+
+
+
+
+
+
 - Posterior a hacer los intentos de inserciones![imagen 5](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(2).png):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
