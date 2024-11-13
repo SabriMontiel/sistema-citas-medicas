@@ -18,10 +18,10 @@ Los permisos más comunes incluyen:
 #### **Roles**
 Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios, facilitando la gestión de permisos. Algunos roles comunes son:
 
-- **db\_owner**: Control total sobre la base de datos.
-- **db\_datareader**: Permite leer todas las tablas.
-- **db\_datawriter**: Permite modificar datos en las tablas.
-- **db\_securityadmin**: Permite gestionar permisos y roles.
+- **db_owner**: Control total sobre la base de datos.
+- **db_datareader**: Permite leer todas las tablas.
+- **db_datawriter**: Permite modificar datos en las tablas.
+- **db_securityadmin**: Permite gestionar permisos y roles.
 
 ###
 ###
@@ -45,27 +45,27 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
        ```
 
 1. **Asignación de Permisos**:
-   1. Al usuario **AdminMedico** se le otorgan permisos de administrador, como **db\_owner**.
+   1. Al usuario **AdminMedico** se le otorgan permisos de administrador, como **db_owner**.
 
    
        ```sql
            ALTER ROLE db_owner ADD MEMBER AdminMedico;
        ```
 
-   1. Al usuario **ConsultaMedica** se le otorgan permisos de solo lectura sobre la tabla **Atencion\_medica** y permisos de ejecución sobre el procedimiento almacenado **sp\_InsertAtencionMedica**.
+   1. Al usuario **ConsultaMedica** se le otorgan permisos de solo lectura sobre la tabla **Atencion_medica** y permisos de ejecución sobre el procedimiento almacenado **sp_InsertAtencionMedica**.
 
        ```sql
-           -- Permiso de lectura en la tabla Atencion\_medica
+           -- Permiso de lectura en la tabla Atencion_medica
 
-           GRANT SELECT ON dbo.Atencion\_medica TO ConsultaMedica;
+           GRANT SELECT ON dbo.Atencion_medica TO ConsultaMedica;
 
-           -- Permiso de ejecucion en el procedimiento almacenado sp\_InsertAtencionMedica
+           -- Permiso de ejecucion en el procedimiento almacenado sp_InsertAtencionMedica
 
-           GRANT EXECUTE ON dbo.sp\_InsertAtencionMedica TO ConsultaMedica;
+           GRANT EXECUTE ON dbo.sp_InsertAtencionMedica TO ConsultaMedica;
        ```
 
 1. **Uso de Procedimientos Almacenados**:
-   1. Se crea un procedimiento almacenado (**sp\_InsertAtencionMedica**) que permite insertar datos en la tabla **Atencion\_medica**.
+   1. Se crea un procedimiento almacenado (**sp_InsertAtencionMedica**) que permite insertar datos en la tabla **Atencion_medica**.
    1. El usuario **ConsultaMedica**, a pesar de tener solo permisos de lectura, puede ejecutar este procedimiento para insertar datos.
 
 
