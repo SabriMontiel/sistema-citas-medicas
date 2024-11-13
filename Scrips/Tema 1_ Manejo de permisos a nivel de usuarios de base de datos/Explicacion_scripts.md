@@ -193,7 +193,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
      GRANT SELECT ON dbo.Diagnostico TO LecturaDiagnostico;
 ```
 
-1. Un usuario recibe permiso sobre este rol, lo que le permite ejecutar consultas **SELECT**, mientras que otro usuario, sin ese permiso, no puede acceder a la tabla.
+ii. Un usuario recibe permiso sobre este rol, lo que le permite ejecutar consultas **SELECT**, mientras que otro usuario, sin ese permiso, no puede acceder a la tabla.
 
 ```sql
      -- Asignar el rol LecturaDiagnostico a UsuarioConPermisoLectura
