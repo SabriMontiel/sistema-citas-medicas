@@ -155,7 +155,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 
 
-- Posterior a hacer los intentos de inserciones![](Aspose.Words.84b45afb-0bab-4a8c-b99a-e5cfd64d0012.005.png):
+- Posterior a hacer los intentos de inserciones![imagen 5](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(2).png):
 
 
 
