@@ -176,48 +176,48 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
    1. Se crean usuarios adicionales y un rol (**LecturaDiagnostico**) que permite solo la lectura en la tabla **Diagnostico**.
 
 ```sql
-`   `-- Crear usuario que tendrá permisos de lectura en la tabla Diagnostico
+     -- Crear usuario que tendrá permisos de lectura en la tabla Diagnostico
 
-`   `CREATE LOGIN UsuarioConPermisoLectura WITH PASSWORD = 'Password123';
+     CREATE LOGIN UsuarioConPermisoLectura WITH PASSWORD = 'Password123';
 
-`   `CREATE USER UsuarioConPermisoLectura FOR LOGIN UsuarioConPermisoLectura;
+     CREATE USER UsuarioConPermisoLectura FOR LOGIN UsuarioConPermisoLectura;
 
 
 
-`   `-- Crear usuario que no tendrá permisos en la tabla Diagnostico
+     -- Crear usuario que no tendrá permisos en la tabla Diagnostico
 
-`   `CREATE LOGIN UsuarioSinPermisoLectura WITH PASSWORD = 'Password123';
+     CREATE LOGIN UsuarioSinPermisoLectura WITH PASSWORD = 'Password123';
 
-`   `CREATE USER UsuarioSinPermisoLectura FOR LOGIN UsuarioSinPermisoLectura;
+     CREATE USER UsuarioSinPermisoLectura FOR LOGIN UsuarioSinPermisoLectura;
 
-`      `-- Crear el rol LecturaDiagnostico con permisos de solo lectura en la tabla         
+        -- Crear el rol LecturaDiagnostico con permisos de solo lectura en la tabla         
 
-`         `Diagnostico
+           Diagnostico
 
-`             `CREATE ROLE LecturaDiagnostico;
+               CREATE ROLE LecturaDiagnostico;
 
-`             `GRANT SELECT ON dbo.Diagnostico TO LecturaDiagnostico;
+               GRANT SELECT ON dbo.Diagnostico TO LecturaDiagnostico;
 ```
 
 1. Un usuario recibe permiso sobre este rol, lo que le permite ejecutar consultas **SELECT**, mientras que otro usuario, sin ese permiso, no puede acceder a la tabla.
 
 ```sql
-`   `-- Asignar el rol LecturaDiagnostico a UsuarioConPermisoLectura
+     -- Asignar el rol LecturaDiagnostico a UsuarioConPermisoLectura
 
-`   `ALTER ROLE LecturaDiagnostico ADD MEMBER UsuarioConPermisoLectura;
+     ALTER ROLE LecturaDiagnostico ADD MEMBER UsuarioConPermisoLectura;
 ```
 
 1. **Verificación de Comportamiento**:
    1. El usuario con el rol **LecturaDiagnostico** puede leer datos de la tabla, mientras que el usuario sin ese permiso recibe un error al intentar hacerlo.
 
 ```sql
-`   `-- Consulta permitida para UsuarioConPermisoLectura sobre Diagnostico y no    
+     -- Consulta permitida para UsuarioConPermisoLectura sobre Diagnostico y no    
 
-`   `permitida para UsuarioSinPermisoLectura (deberia fallar para    
+     permitida para UsuarioSinPermisoLectura (deberia fallar para    
 
-`   `UsuarioSinPermisoLectura)
+     UsuarioSinPermisoLectura)
 
-`   `SELECT \* FROM dbo.Diagnostico;
+     SELECT \* FROM dbo.Diagnostico;
 ```
 
 - Usuario con permiso:
