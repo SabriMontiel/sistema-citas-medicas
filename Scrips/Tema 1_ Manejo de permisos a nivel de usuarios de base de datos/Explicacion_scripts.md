@@ -190,11 +190,11 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
      CREATE USER UsuarioSinPermisoLectura FOR LOGIN UsuarioSinPermisoLectura;
 
-        -- Crear el rol LecturaDiagnostico con permisos de solo lectura en la tabla Diagnostico
+     -- Crear el rol LecturaDiagnostico con permisos de solo lectura en la tabla Diagnostico
 
-               CREATE ROLE LecturaDiagnostico;
+     CREATE ROLE LecturaDiagnostico;
 
-               GRANT SELECT ON dbo.Diagnostico TO LecturaDiagnostico;
+     GRANT SELECT ON dbo.Diagnostico TO LecturaDiagnostico;
 ```
 
 1. Un usuario recibe permiso sobre este rol, lo que le permite ejecutar consultas **SELECT**, mientras que otro usuario, sin ese permiso, no puede acceder a la tabla.
