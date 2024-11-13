@@ -149,19 +149,19 @@ Los principales resultados del desarrollo fueron los siguientes:
 
 ![imagen4](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/WhatsApp%20Image%202024-10-02%20at%2022.11.15.jpeg)
 
-Desarrollo TEMA 1 “Permisos a Nivel de Usuario”
+# **Desarrollo TEMA 1 “Permisos a Nivel de Usuario”**
 
 Los permisos a nivel de usuario son configuraciones en bases de datos que determinan qué acciones puede realizar cada usuario sobre los objetos de la base de datos, como por ejemplo tablas y procedimientos almacenados. Estos permisos son fundamentales para garantizar la seguridad y la integridad de los datos. Los usuarios pueden tener diferentes niveles de acceso según sus necesidades y roles en la organización.  
 Sentencias para Manejar Permisos
 
-Las principales sentencias SQL para manejar permisos son:
+**Las principales sentencias SQL para manejar permisos son:**
 
 * GRANT: Para otorgar permisos a un usuario o rol.  
 * REVOKE: Para quitar permisos previamente otorgados.  
 * DENY: Para denegar explícitamente permisos, lo que prevalece sobre permisos otorgados.
 
-Tipos de Permisos Más Comunes  
-Los permisos más comunes incluyen:
+**Tipos de Permisos Más Comunes**  
+**Los permisos más comunes incluyen:**
 
 * SELECT: Permite leer datos.  
 * INSERT: Permite agregar nuevos registros.  
@@ -169,7 +169,8 @@ Los permisos más comunes incluyen:
 * DELETE: Permite eliminar registros.  
 * EXECUTE: Permite ejecutar procedimientos almacenados.
 
-Roles  
+**Roles** 
+
 Los roles son conjuntos de permisos que se pueden asignar a varios usuarios, facilitando la gestión de permisos. Algunos roles comunes son:
 
 * db\_owner: Control total sobre la base de datos.  
@@ -177,17 +178,49 @@ Los roles son conjuntos de permisos que se pueden asignar a varios usuarios, fac
 * db\_datawriter: Permite modificar datos en las tablas.  
 * db\_securityadmin: Permite gestionar permisos y roles.
 
-Para ver el desarrollo practico del tema ir a: [Tema_1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/Scrips/Manejo%20de%20permisos%20y%20roles%20.sql)
+**Para ver el desarrollo practico del tema ir a:** [Tema_1](https://github.com/SabriMontiel/sistema-citas-medicas/tree/master/Scrips/Tema%201_%20Manejo%20de%20permisos%20a%20nivel%20de%20usuarios%20de%20base%20de%20datos)
 
+# **Desarrollo TEMA 3 “Optimizacion de consultas por indices”**
 
+En las bases de datos, el rendimiento de las consultas y el tiempo de consulta de las mismas, es un factor muy importante para lo que sería la recuperación de la información. Estos tiempos de consulta y rendimiento antes mencionado irán creciendo conforme la magnitud de los datos sea mayor, y si no se tiene algún método de optimización estas consultas pueden llegar a tomar mucho tiempo. Una de las técnicas mas comunes y efectivas para mejorar el rendimiento en las consultas son los denominados índices. 
+
+**Índices**
+
+Un índice es una estructura auxiliar que lo que hace es mejorar la velocidad de las operaciones de consulta, ya que se reducen la cantidad de datos que la consulta misma debe revisar para poder encontrar los registros correspondientes. En palabras mas simples tienen la misma funcionalidad que el índice de un libro que permite ubicar una sección especifica sin necesidad de leer todas las paginas.
+
+**Hay varios tipos de índices:**
+
+**Índice agrupado:**
+Este tipo de índice lo que hace es ordenar de forma física los datos en la tabla según la columna que se indexa. Solo una tabla puede contener un índice agrupado. Es buena para buscar rangos o intervalos de una columna en especifico.
+
+**Índice no agrupado:**
+En este tipo de indica se crea una estructura aparte para poder ordenar y buscar los datos, a diferencia del agrupado este no cambia el orden físico de los datos. Una tabla puede tener varios indices no agrupados.
+
+**Índice único:**
+Este índice no permite valores duplicados en una columna previamente indexada, el valor de la columna debe ser único, bastante similar al uso de claves primarias.
+
+**Índice compuesto:**
+Es un índice que utiliza dos o mas columnas de una misma tabla. Resulta especialmente útil cuando se consulta por 2 columnas a la vez.
+
+**Índice columnar:**
+Indice diseñado para manejar grandes cantidades de datos, este organiza los datos en columnas en lugar de filas lo que hace que sea mas rápido analizar datos específicos de muchas filas.
+
+**En este trabajo solo se van a contemplar los agrupados y no agrupados.**
+
+Tambien existen varios tipos de **búsqueda** como, **búsqueda exacta**, **por rango**, **por patron**, etc, pero en este trabajo solo se va a contemplar la búsqueda por **periodo**.
+
+**Para ver el desarrollo practico del tema ir a:** [Tema_3](https://github.com/SabriMontiel/sistema-citas-medicas/tree/master/Scrips/Tema%203_Optimizacion_Consultas_Indice)
 
 # CAPÍTULO V: CONCLUSIONES  
+
+Con respecto a las conclusiones del [Tema_3](https://github.com/SabriMontiel/sistema-citas-medicas/tree/master/Scrips/Tema%203_Optimizacion_Consultas_Indice) Se pudo concluir que debido a que los índices agrupados, permiten organizar físicamente los datos en la tabla los tiempos de respuesta mejoran bastante a que si la tabla en cuestión, no tiene índices. La desventaja de utilizar índices agrupados es que solo se puede tener un solo índice agrupado por tabla. También se concluyó que utilizar índices agrupado con mas de una columna  generan casi el mismo tiempo de respuesta, ya que justamente depende de la consulta en cuestión y además en este caso como estamos consultando por fecha_nacimiento de nuevo entonces los tiempos no van a variar mucho.
 
 El sistema de gestión de citas médicas cumplió con los objetivos planteados, permitiendo la organización de citas, el almacenamiento seguro de la información de los pacientes y médicos, y el seguimiento de diagnósticos y tratamientos. La implementación del sistema permite mejorar la eficiencia en la gestión de las citas médicas, reduciendo los solapamientos y mejorando la organización de la información médica, lo que impacta directamente en la calidad de atención.
 
 Algunos de los desafíos encontrados incluyeron la gestión de la integridad referencial y la validación de datos para evitar errores de ingreso, los cuales fueron abordados mediante restricciones en el DBMS.
 
 El sistema tiene un alto potencial de expansión, permitiendo en el futuro agregar funcionalidades como un historial médico completo y la integración con sistemas de telemedicina.
+
 
 # CAPÍTULO VI: BIBLIOGRAFÍA. 
 
