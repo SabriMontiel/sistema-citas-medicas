@@ -211,6 +211,27 @@ Tambien existen varios tipos de **búsqueda** como, **búsqueda exacta**, **por 
 
 **Para ver el desarrollo practico del tema ir a:** [Tema_3](https://github.com/SabriMontiel/sistema-citas-medicas/tree/master/Scrips/Tema%203_Optimizacion_Consultas_Indice)
 
+
+<a name="_w0tsp94yys3e"></a>**Indices Columnares**
+
+Los índices columnares permiten almacenar los datos por columnas, es decir, que primero se almacenaran uno tras otro los datos de la primer columna de todos los registros, luego se almacenara todos los datos de la segunda columna, y así sucesivamente hasta almacenar toda la información. Una vez llegado el momento de rescatar la información, primero se accederá al dato de la primer columna del primer registro, luego al dato de la primer columna del segundo registro, y así hasta leer todos los datos de la primer columna, tras lo cual se encontrara el dato de la segunda columna del primer registro, haciendo un proceso análogo hasta leer toda la información. Esta forma de almacenar y acceder a los datos puede disminuir considerablemente los tiempos de respuesta de un sistema si se implementa de manera correcta. 
+
+En aquellos sistemas que se centran en consultas analíticas, que requieren de operaciones de agregación sobre un gran volumen de datos o un análisis de grandes cantidades de información, el uso sensato de indices reduce enormemente el tiempo de respuesta de las consultas.
+
+Este trabajo esta centrado en el uso de indices columnares en SQL Server. Algunos motores de bases de datos también ofrecen esta funcionalidad, varios de ellos requieren de alguna extensión adicional y en otros no están implementados.
+
+En SQL Server se los conoce como Columnstore Index. La sintaxis para la creacion de uno es la siguiente, sacado de un ejemplo de nuestro desarrollo practico:
+
+CREATE COLUMNSTORE INDEX idx_columnstore_paciente
+ON paciente_con_indice (email, id_sexo, fecha_nacimiento, id_localidad);
+
+CREATE para crear un nuevo indice, luego COLUMNSTORE INDEX en caso de que creemos un indice columnar no agrupado(usa más espacio de almacenamiento, ya que el índice no reemplaza la tabla original) o CLUSTERED COLUMNSTORE INDEX en caso de crear un indice columnar agrupado(reemplaza la estructura de almacenamiento de la tabla, almacenando los datos en el indice utilizando ordenamiento por columna), seguido del nombre que queremos asignar al indice(en este caso comienza con idx_columnstore para seguir una convencion generalizada), para finalizar con ON nombre_de_la_tabla y entre parentesis las columnas de la tabla que queremos guardar en el indice.
+
+Al ordenar los datos por columna, el poderoso algoritmo VertiPaq desarrollado por microsoft, permite comprimir enormemente la información, incrementando su beneficio de forma exponencial cuando trabajamos con enormes conjuntos de datos. De esta manera, ahorramos espacio de almacenamiento y los tiempos de respuesta ya se ven beneficiados debido a que es menor la información que debe ser rescatada de dispositivos de almacenamiento como por ejemplo un disco rígido cuyos cabezales deberán moverse menos.
+
+Pero ademas, al traer la información ordenada por columna, si queremos realizar una operación de agregación, como SUM, AVG, o COUNT, la consulta se realizara rápidamente.
+
+
 # CAPÍTULO V: CONCLUSIONES  
 
 Con respecto a las conclusiones del [Tema_3](https://github.com/SabriMontiel/sistema-citas-medicas/tree/master/Scrips/Tema%203_Optimizacion_Consultas_Indice) Se pudo concluir que debido a que los índices agrupados, permiten organizar físicamente los datos en la tabla los tiempos de respuesta mejoran bastante a que si la tabla en cuestión, no tiene índices. La desventaja de utilizar índices agrupados es que solo se puede tener un solo índice agrupado por tabla. También se concluyó que utilizar índices agrupado con mas de una columna  generan casi el mismo tiempo de respuesta, ya que justamente depende de la consulta en cuestión y además en este caso como estamos consultando por fecha_nacimiento de nuevo entonces los tiempos no van a variar mucho.
