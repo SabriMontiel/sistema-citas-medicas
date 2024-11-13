@@ -48,20 +48,20 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
    
        ```sql
-      `   `ALTER ROLE db\_owner ADD MEMBER AdminMedico;
+           ALTER ROLE db\_owner ADD MEMBER AdminMedico;
 
    1. Al usuario **ConsultaMedica** se le otorgan permisos de solo lectura sobre la tabla **Atencion\_medica** y permisos de ejecución sobre el procedimiento almacenado **sp\_InsertAtencionMedica**.
 
        ```sql
-      `   `-- Permiso de lectura en la tabla Atencion\_medica
+           -- Permiso de lectura en la tabla Atencion\_medica
 
-      `   `GRANT SELECT ON dbo.Atencion\_medica TO ConsultaMedica;
+           GRANT SELECT ON dbo.Atencion\_medica TO ConsultaMedica;
 
-      `   `-- Permiso de ejecucion en el procedimiento almacenado
+           -- Permiso de ejecucion en el procedimiento almacenado
 
-      `   `sp\_InsertAtencionMedica
+           sp\_InsertAtencionMedica
 
-      `   `GRANT EXECUTE ON dbo.sp\_InsertAtencionMedica TO ConsultaMedica;
+           GRANT EXECUTE ON dbo.sp\_InsertAtencionMedica TO ConsultaMedica;
 
 1. **Uso de Procedimientos Almacenados**:
    1. Se crea un procedimiento almacenado (**sp\_InsertAtencionMedica**) que permite insertar datos en la tabla **Atencion\_medica**.
