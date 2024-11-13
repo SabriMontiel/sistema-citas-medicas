@@ -127,7 +127,9 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 `       `@id\_tratamiento = 1;       -- Fisioterapia
 
 
-- ![imagen 1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(4).png)Previo a hacer los intentos de inserciones:
+
+Previo a hacer los intentos de inserciones:
+- ![imagen 1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(4).png)
 
 
 
