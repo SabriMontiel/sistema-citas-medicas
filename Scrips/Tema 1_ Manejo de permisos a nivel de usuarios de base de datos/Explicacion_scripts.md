@@ -95,7 +95,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 `               `END;
 
-1. **Verificación de Comportamiento**:
+4. **Verificación de Comportamiento**:
    1. El usuario **AdminMedico** puede realizar **INSERT** directamente en la tabla.
 
 `   `-- Inserción permitida para el usuario AdminMedico
@@ -127,13 +127,14 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 `       `@id\_tratamiento = 1;       -- Fisioterapia
 
 
-- ![imagen 1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(4).png)Previo a hacer los intentos de inserciones:
+- Previo a hacer los intentos de inserciones:
+  ![imagen 1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(4).png)
 
 
 
 - Inserción hecha con **AdminMedico** con el insert:
 
-![imagen 2](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(1).png)
+   ![imagen 2](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(1).png)
 
 
 
@@ -143,19 +144,11 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 
 
-- ![imagen 3](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(6).png)Inserción hecha con **ConsultaMedica** con el insert:
+- Inserción hecha con **ConsultaMedica** con el insert:
+  ![imagen 3](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(6).png)
+  
 - Inserción hecha con **ConsultaMedica** con el procedimiento almacenado:
-
-![imagen 4](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(7).png)
-
-
-
-
-
-
-
-
-- Posterior a hacer los intentos de inserciones![imagen 5](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(2).png):
+  ![imagen 4](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(7).png)
 
 
 
@@ -164,17 +157,8 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+- Posterior a hacer los intentos de inserciones:
+  ![imagen 5](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(2).png)
 
 
 
