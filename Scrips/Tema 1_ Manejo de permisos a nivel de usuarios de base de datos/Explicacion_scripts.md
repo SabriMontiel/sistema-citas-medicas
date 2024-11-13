@@ -31,17 +31,17 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
    1. Se crean dos usuarios en la base de datos: un usuario con permisos de administrador (**AdminMedico**) y otro con permisos de solo lectura (**ConsultaMedica**).
 
        ```sql
-       `   `-- Creacion del usuario con permisos de administrador
+           -- Creacion del usuario con permisos de administrador
 
-      `   `CREATE LOGIN AdminMedico WITH PASSWORD = 'AdminPassword123';
+          `CREATE LOGIN AdminMedico WITH PASSWORD = 'AdminPassword123';
 
-      `   `CREATE USER AdminMedico FOR LOGIN AdminMedico;
+          `CREATE USER AdminMedico FOR LOGIN AdminMedico;
 
-      `   `-- Creacion del usuario con permisos de solo lectura y ejecucion
+          `-- Creacion del usuario con permisos de solo lectura y ejecucion
 
-      `   `CREATE LOGIN ConsultaMedica WITH PASSWORD = 'ConsultaPassword123';
+          `CREATE LOGIN ConsultaMedica WITH PASSWORD = 'ConsultaPassword123';
 
-      `   `CREATE USER ConsultaMedica FOR LOGIN ConsultaMedica;
+          `CREATE USER ConsultaMedica FOR LOGIN ConsultaMedica;
 
 1. **Asignación de Permisos**:
    1. Al usuario **AdminMedico** se le otorgan permisos de administrador, como **db\_owner**.
