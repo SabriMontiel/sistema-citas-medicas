@@ -59,9 +59,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
            GRANT SELECT ON dbo.Atencion\_medica TO ConsultaMedica;
 
-           -- Permiso de ejecucion en el procedimiento almacenado
-
-           sp\_InsertAtencionMedica
+           -- Permiso de ejecucion en el procedimiento almacenado sp\_InsertAtencionMedica
 
            GRANT EXECUTE ON dbo.sp\_InsertAtencionMedica TO ConsultaMedica;
        ```
@@ -72,70 +70,70 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 
 ```sql
-`   `-- Creación del procedimiento almacenado para insertar atención médica
+     -- Creación del procedimiento almacenado para insertar atención médica
 
-`   `CREATE PROCEDURE sp\_InsertAtencionMedica
+     CREATE PROCEDURE sp_InsertAtencionMedica
 
-`       `@id\_atencion\_medica INT,
+         @id_atencion_medica INT,
 
-`       `@fecha\_consulta DATE,
+         @fecha_consulta DATE,
 
-`       `@notas\_observacion VARCHAR(250),
+         @notas_observacion VARCHAR(250),
 
-`       `@id\_paciente INT,
+         @id_paciente INT,
 
-`       `@id\_profesional INT,
+         @id_profesional INT,
 
-`       `@id\_tratamiento INT
+         @id_tratamiento INT
 
-`   `AS
+     AS
 
-`   `BEGIN
+     BEGIN
 
-`       `INSERT INTO dbo.Atencion\_medica (id\_atencion\_medica, fecha\_consulta,   
+         INSERT INTO dbo.Atencion_medica (id_atencion_medica, fecha_consulta,   
 
-`    		       `notas\_observacion\_, id\_paciente, id\_profesional, id\_tratamiento)
+     		        notas_observacion_, id_paciente, id_profesional, id_tratamiento)
 
-`    	   `VALUES (@id\_atencion\_medica, @fecha\_consulta, @notas\_observacion, 
+     	    VALUES (@id_atencion_medica, @fecha_consulta, @notas_observacion, 
 
-`   	   	   `@id\_paciente, @id\_profesional, @id\_tratamiento);
+    	   	    @id_paciente, @id_profesional, @id_tratamiento);
 
-`               `END;
+                 END;
 ```
 
 4. **Verificación de Comportamiento**:
    1. El usuario **AdminMedico** puede realizar **INSERT** directamente en la tabla.
 
 ``` sql
-`   `-- Inserción permitida para el usuario AdminMedico
+     -- Inserción permitida para el usuario AdminMedico
 
-`   `INSERT INTO dbo.Atencion\_medica (id\_atencion\_medica, fecha\_consulta,    
+     INSERT INTO dbo.Atencion_medica (id_atencion_medica, fecha_consulta,    
 
-`   `notas\_observacion\_, id\_paciente, id\_profesional, id\_tratamiento)
+     notas_observacion_, id_paciente, id_profesional, id_tratamiento)
 
-`   `VALUES (10, '2024-07-10', 'Control de seguimiento', 3, 3, 1);
+     VALUES (10, '2024-07-10', 'Control de seguimiento', 3, 3, 1);
 ```
 
 1. El usuario **ConsultaMedica**, aunque no puede hacer un **INSERT** directo, puede llamar al procedimiento almacenado para realizar inserciones.
 
 ``` sql
-`   `--El usuario ConsultaMedica debe usar el procedimiento almacenado para    
+     --El usuario ConsultaMedica debe usar el procedimiento almacenado para    
 
-`   `realizar inserciones
+     realizar inserciones
 
-`   `EXEC dbo.sp\_InsertAtencionMedica 
+     EXEC dbo.sp_InsertAtencionMedica 
 
-`       `@id\_atencion\_medica = 7,  
+         @id_atencion_medica = 7,  
 
-`       `@fecha\_consulta = '2024-07-10', 
+         @fecha_consulta = '2024-07-10', 
 
-`       `@notas\_observacion = 'Revisión de seguimiento por dolor de rodilla', 
+         @notas_observacion = 'Revisión de seguimiento por dolor de rodilla', 
 
-`       `@id\_paciente = 2,          -- ID de Maria Gomez
+         @id_paciente = 2,          -- ID de Maria Gomez
 
-`       `@id\_profesional = 2,       -- ID de Maria Gonzalez
+         @id_profesional = 2,       -- ID de Maria Gonzalez
 
-`       `@id\_tratamiento = 1;       -- Fisioterapia
+         @id_tratamiento = 1;       -- Fisioterapia
 ```
 
 - Previo a hacer los intentos de inserciones:
