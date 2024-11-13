@@ -211,7 +211,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 ```sql
      -- Consulta permitida para UsuarioConPermisoLectura sobre Diagnostico y no permitida para UsuarioSinPermisoLectura (deberia fallar para UsuarioSinPermisoLectura)
 
-     SELECT \* FROM dbo.Diagnostico;
+     SELECT * FROM dbo.Diagnostico;
 ```
 
 - Usuario con permiso:
