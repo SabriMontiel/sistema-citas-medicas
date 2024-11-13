@@ -117,9 +117,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 1. El usuario **ConsultaMedica**, aunque no puede hacer un **INSERT** directo, puede llamar al procedimiento almacenado para realizar inserciones.
 
 ``` sql
-     --El usuario ConsultaMedica debe usar el procedimiento almacenado para    
-
-     realizar inserciones
+     --El usuario ConsultaMedica debe usar el procedimiento almacenado para realizar inserciones
 
      EXEC dbo.sp_InsertAtencionMedica 
 
