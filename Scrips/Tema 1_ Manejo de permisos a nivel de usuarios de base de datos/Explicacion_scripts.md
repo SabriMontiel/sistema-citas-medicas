@@ -67,6 +67,8 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
    1. Se crea un procedimiento almacenado (**sp\_InsertAtencionMedica**) que permite insertar datos en la tabla **Atencion\_medica**.
    1. El usuario **ConsultaMedica**, a pesar de tener solo permisos de lectura, puede ejecutar este procedimiento para insertar datos.
 
+
+```sql
 `   `-- Creación del procedimiento almacenado para insertar atención médica
 
 `   `CREATE PROCEDURE sp\_InsertAtencionMedica
@@ -96,10 +98,12 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 `   	   	   `@id\_paciente, @id\_profesional, @id\_tratamiento);
 
 `               `END;
+```
 
 4. **Verificación de Comportamiento**:
    1. El usuario **AdminMedico** puede realizar **INSERT** directamente en la tabla.
 
+``` sql
 `   `-- Inserción permitida para el usuario AdminMedico
 
 `   `INSERT INTO dbo.Atencion\_medica (id\_atencion\_medica, fecha\_consulta,    
@@ -107,9 +111,11 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 `   `notas\_observacion\_, id\_paciente, id\_profesional, id\_tratamiento)
 
 `   `VALUES (10, '2024-07-10', 'Control de seguimiento', 3, 3, 1);
+```
 
 1. El usuario **ConsultaMedica**, aunque no puede hacer un **INSERT** directo, puede llamar al procedimiento almacenado para realizar inserciones.
 
+``` sql
 `   `--El usuario ConsultaMedica debe usar el procedimiento almacenado para    
 
 `   `realizar inserciones
@@ -127,7 +133,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 `       `@id\_profesional = 2,       -- ID de Maria Gonzalez
 
 `       `@id\_tratamiento = 1;       -- Fisioterapia
-
+```
 
 - Previo a hacer los intentos de inserciones:
   ![imagen 1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(4).png)
@@ -170,6 +176,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 5. **Creación de Roles**:
    1. Se crean usuarios adicionales y un rol (**LecturaDiagnostico**) que permite solo la lectura en la tabla **Diagnostico**.
 
+```sql
 `   `-- Crear usuario que tendrá permisos de lectura en la tabla Diagnostico
 
 `   `CREATE LOGIN UsuarioConPermisoLectura WITH PASSWORD = 'Password123';
@@ -191,17 +198,20 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 `             `CREATE ROLE LecturaDiagnostico;
 
 `             `GRANT SELECT ON dbo.Diagnostico TO LecturaDiagnostico;
+```
 
 1. Un usuario recibe permiso sobre este rol, lo que le permite ejecutar consultas **SELECT**, mientras que otro usuario, sin ese permiso, no puede acceder a la tabla.
 
+```sql
 `   `-- Asignar el rol LecturaDiagnostico a UsuarioConPermisoLectura
 
 `   `ALTER ROLE LecturaDiagnostico ADD MEMBER UsuarioConPermisoLectura;
-
+```
 
 1. **Verificación de Comportamiento**:
    1. El usuario con el rol **LecturaDiagnostico** puede leer datos de la tabla, mientras que el usuario sin ese permiso recibe un error al intentar hacerlo.
 
+```sql
 `   `-- Consulta permitida para UsuarioConPermisoLectura sobre Diagnostico y no    
 
 `   `permitida para UsuarioSinPermisoLectura (deberia fallar para    
@@ -209,6 +219,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 `   `UsuarioSinPermisoLectura)
 
 `   `SELECT \* FROM dbo.Diagnostico;
+```
 
 - Usuario con permiso:
 
