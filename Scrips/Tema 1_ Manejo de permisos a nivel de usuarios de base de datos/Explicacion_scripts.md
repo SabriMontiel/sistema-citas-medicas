@@ -30,7 +30,8 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 1. **Creación de Usuarios**:
    1. Se crean dos usuarios en la base de datos: un usuario con permisos de administrador (**AdminMedico**) y otro con permisos de solo lectura (**ConsultaMedica**).
 
-      `   `-- Creacion del usuario con permisos de administrador
+       ```sql
+       `   `-- Creacion del usuario con permisos de administrador
 
       `   `CREATE LOGIN AdminMedico WITH PASSWORD = 'AdminPassword123';
 
