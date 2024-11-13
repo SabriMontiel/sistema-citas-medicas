@@ -212,7 +212,7 @@ Tambien existen varios tipos de **búsqueda** como, **búsqueda exacta**, **por 
 **Para ver el desarrollo practico del tema ir a:** [Tema_3](https://github.com/SabriMontiel/sistema-citas-medicas/tree/master/Scrips/Tema%203_Optimizacion_Consultas_Indice)
 
 
-<a name="_w0tsp94yys3e"></a>**Indices Columnares**
+# **Desarrollo TEMA 4 “Índices Columnares”**
 
 Los índices columnares permiten almacenar los datos por columnas, es decir, que primero se almacenaran uno tras otro los datos de la primer columna de todos los registros, luego se almacenara todos los datos de la segunda columna, y así sucesivamente hasta almacenar toda la información. Una vez llegado el momento de rescatar la información, primero se accederá al dato de la primer columna del primer registro, luego al dato de la primer columna del segundo registro, y así hasta leer todos los datos de la primer columna, tras lo cual se encontrara el dato de la segunda columna del primer registro, haciendo un proceso análogo hasta leer toda la información. Esta forma de almacenar y acceder a los datos puede disminuir considerablemente los tiempos de respuesta de un sistema si se implementa de manera correcta. 
 
