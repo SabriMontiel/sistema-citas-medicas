@@ -137,7 +137,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 
 - Previo a hacer los intentos de inserciones:
-- 
+  
   ![imagen 1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(4).png)
 
 - Inserción hecha con **AdminMedico** con el insert:
@@ -145,7 +145,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
    ![imagen 2](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(1).png)
 
 - Inserción hecha con **ConsultaMedica** con el insert:
-- 
+  
   ![imagen 3](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(6).png)
   
 - Inserción hecha con **ConsultaMedica** con el procedimiento almacenado:
@@ -160,7 +160,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 
 - Posterior a hacer los intentos de inserciones:
-- 
+  
   ![imagen 5](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(2).png)
 
 
