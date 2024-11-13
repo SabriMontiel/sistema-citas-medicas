@@ -114,7 +114,8 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
      VALUES (10, '2024-07-10', 'Control de seguimiento', 3, 3, 1);
 ```
 
-ii. El usuario **ConsultaMedica**, aunque no puede hacer un **INSERT** directo, puede llamar al procedimiento almacenado para realizar inserciones.
+   ii. El usuario **ConsultaMedica**, aunque no puede hacer un **INSERT** directo, puede llamar al 
+   procedimiento almacenado para realizar inserciones.
 
 ``` sql
      --El usuario ConsultaMedica debe usar el procedimiento almacenado para realizar inserciones
