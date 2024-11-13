@@ -143,10 +143,10 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 
 
-- ![](Aspose.Words.84b45afb-0bab-4a8c-b99a-e5cfd64d0012.003.png)Inserción hecha con **ConsultaMedica** con el insert:
+- ![imagen 3](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(6).png)Inserción hecha con **ConsultaMedica** con el insert:
 - Inserción hecha con **ConsultaMedica** con el procedimiento almacenado:
 
-![](Aspose.Words.84b45afb-0bab-4a8c-b99a-e5cfd64d0012.004.png)
+![imagen 4](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(7).png)
 
 
 
