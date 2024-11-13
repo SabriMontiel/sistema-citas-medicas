@@ -127,13 +127,13 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 `       `@id\_tratamiento = 1;       -- Fisioterapia
 
 
-- ![](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(4).png)Previo a hacer los intentos de inserciones:
+- ![imagen 1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(4).png)Previo a hacer los intentos de inserciones:
 
 
 
 - Inserción hecha con **AdminMedico** con el insert:
 
-![](Aspose.Words.84b45afb-0bab-4a8c-b99a-e5cfd64d0012.002.png)
+![imagen 2](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(1).png)
 
 
 
