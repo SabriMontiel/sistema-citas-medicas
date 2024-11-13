@@ -47,11 +47,12 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
    1. Al usuario **AdminMedico** se le otorgan permisos de administrador, como **db\_owner**.
 
    
-
+       ```sql
       `   `ALTER ROLE db\_owner ADD MEMBER AdminMedico;
 
    1. Al usuario **ConsultaMedica** se le otorgan permisos de solo lectura sobre la tabla **Atencion\_medica** y permisos de ejecución sobre el procedimiento almacenado **sp\_InsertAtencionMedica**.
 
+       ```sql
       `   `-- Permiso de lectura en la tabla Atencion\_medica
 
       `   `GRANT SELECT ON dbo.Atencion\_medica TO ConsultaMedica;
