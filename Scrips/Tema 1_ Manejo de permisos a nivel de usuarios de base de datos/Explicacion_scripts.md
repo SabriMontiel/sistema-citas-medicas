@@ -190,9 +190,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
      CREATE USER UsuarioSinPermisoLectura FOR LOGIN UsuarioSinPermisoLectura;
 
-        -- Crear el rol LecturaDiagnostico con permisos de solo lectura en la tabla         
-
-           Diagnostico
+        -- Crear el rol LecturaDiagnostico con permisos de solo lectura en la tabla Diagnostico
 
                CREATE ROLE LecturaDiagnostico;
 
