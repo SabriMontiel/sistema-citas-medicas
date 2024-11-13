@@ -23,3 +23,5 @@ Creación de Funciones.
 Se crearon 3 funciones esenciales para el sistema en el que estamos trabajando ya que nos ahorra a la hora de buscar información importante como lo son el calcular la edad de un paciente, obtener el nombre completo y obtener la obra social de un paciente específico.
 
 En la siguiente imagen se puede observar la utilización de todas las funciones en una sola consulta, facilitando así la obtención de estos datos.
+
+![imagen1](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/Screenshot%202024-11-12%20at%2023.27.08.png)
