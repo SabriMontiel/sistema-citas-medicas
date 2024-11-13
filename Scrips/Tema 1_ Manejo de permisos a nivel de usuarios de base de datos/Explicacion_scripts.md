@@ -204,7 +204,7 @@ ii. Un usuario recibe permiso sobre este rol, lo que le permite ejecutar consult
 
 
 
-1. **Verificación de Comportamiento**:
+6. **Verificación de Comportamiento**:
    1. El usuario con el rol **LecturaDiagnostico** puede leer datos de la tabla, mientras que el usuario sin ese permiso recibe un error al intentar hacerlo.
 
 ```sql
