@@ -180,7 +180,7 @@ Los roles son conjuntos de permisos que se pueden asignar a varios usuarios, fac
 
 **Para ver el desarrollo practico del tema ir a:** [Tema_1](https://github.com/SabriMontiel/sistema-citas-medicas/tree/master/Scrips/Tema%201_%20Manejo%20de%20permisos%20a%20nivel%20de%20usuarios%20de%20base%20de%20datos)
 
-Desarrollo TEMA 2 “Procedimientos y funciones almacenadas”
+# **Desarrollo TEMA 2 “Procedimientos y funciones almacenadas”**
 
 Un procedimiento almacenado en SQL Server es un grupo de una o más instrucciones Transact-SQL, o una referencia a un método de lenguaje de ejecución común (CLR). Los procedimientos pueden:
 
