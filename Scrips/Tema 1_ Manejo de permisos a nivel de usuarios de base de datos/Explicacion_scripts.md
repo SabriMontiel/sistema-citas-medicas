@@ -148,36 +148,7 @@ Los **roles** son conjuntos de permisos que se pueden asignar a varios usuarios,
 
 ![imagen 4](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(7).png)
 
-
-
-
-
-
-
-
 - Posterior a hacer los intentos de inserciones![imagen 5](https://github.com/SabriMontiel/sistema-citas-medicas/blob/master/imgs/IMAGEN%20FER%20(2).png):
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
