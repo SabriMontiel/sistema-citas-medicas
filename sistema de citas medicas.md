@@ -180,6 +180,46 @@ Los roles son conjuntos de permisos que se pueden asignar a varios usuarios, fac
 
 **Para ver el desarrollo practico del tema ir a:** [Tema_1](https://github.com/SabriMontiel/sistema-citas-medicas/tree/master/Scrips/Tema%201_%20Manejo%20de%20permisos%20a%20nivel%20de%20usuarios%20de%20base%20de%20datos)
 
+Desarrollo TEMA 2 “Procedimientos y funciones almacenadas”
+
+Un procedimiento almacenado en SQL Server es un grupo de una o más instrucciones Transact-SQL, o una referencia a un método de lenguaje de ejecución común (CLR). Los procedimientos pueden:
+
+* Aceptar parámetros de entrada y devolver múltiples valores en forma de parámetros de salida al programa que realiza la llamada.  
+* Contener instrucciones de programación que realizan operaciones en la base de datos. Estas incluyen la llamada a otros procedimientos.  
+* Devolver un valor de estado a un programa que realiza la llamada para indicar que la operación se realizó correctamente o falló (y el motivo de la falla).
+
+Beneficios de utilizar procedimientos almacenados:
+
+* Reducción del tráfico de red entre el servidor y el cliente.  
+* Mayor seguridad, ya que controla qué procesos y actividades se realizan y protege los objetos de base de datos subyacentes. Cuando una aplicación llama a un procedimiento a través de la red, solo es visible la llamada para ejecutar el procedimiento. Por lo tanto, no  se puede ver los nombres de los objetos de la tabla y la base de datos, incrustar sus propias instrucciones Transact-SQL ni buscar datos críticos.  
+* Reutilización de código: ya que se utiliza la encapsulación en procedimientos. Esto elimina las reescrituras innecesarias del mismo código, disminuye la inconsistencia del código y permite el acceso y la ejecución del código por parte de cualquier usuario o aplicación que posea los permisos necesarios.
+
+
+Las funciones definidas por el usuario de SQL Server son rutinas que aceptan parámetros, realizan una acción, como un cálculo complejo, y devuelven el resultado de esa acción como un valor. El valor de retorno puede ser un único valor escalar o un conjunto de resultados.
+
+De manera similar a los procedimientos almacenados, las funciones definidas por el usuario de Transact-SQL reducen el costo de compilación del código de Transact-SQL al almacenar en caché los planes y reutilizarlos para ejecuciones repetidas. Esto significa que no es necesario volver a analizar y optimizar la función definida por el usuario con cada uso, lo que da como resultado tiempos de ejecución mucho más rápidos.
+
+Tipos de funciones:
+
+* Las funciones escalares definidas por el usuario devuelve un único valor de datos del tipo definido en la cláusula RETURNS.  
+* Las funciones con valores de tabla (TVF) devuelven un tipo de datos de tabla. En el caso de una función con valores de tabla en línea, no hay cuerpo de función; la tabla es el conjunto de resultados de una única instrucción SELECT.  
+* Funciones del sistema: SQL Server proporciona muchas funciones del sistema que puede utilizar para realizar diversas operaciones. No se pueden modificar. 
+
+Los errores de Transact-SQL que hacen que se cancele una instrucción y continúe con la siguiente instrucción en el módulo (como desencadenadores o procedimientos almacenados) se tratan de forma diferente dentro de una función. En las funciones, estos errores hacen que se detenga la ejecución de la función. Esto, a su vez, hace que se cancele la instrucción que invocó la función.
+
+Las instrucciones de un bloque BEGIN...END no pueden tener efectos secundarios. Los efectos secundarios de la función son cualquier cambio permanente en el estado de un recurso que tiene un ámbito fuera de la función, como una modificación en una tabla de base de datos. Los únicos cambios que las instrucciones de la función pueden realizar son cambios en objetos locales de la función, como cursores o variables locales.
+
+Comparación entre Procedimientos y funciones almacenadas:
+
+| Características | Procedimientos almacenados | Funciones almacenadas |
+| :---- | :---- | :---- |
+| Devuelven valor | Opcional | Siempre (1 valor o tabla) |
+| Modifican datos | Si | No |
+| Llamadas desde SQL | Si | Si |
+| Usables en SELECT | No | Si |
+
+**Para ver el desarrollo practico del tema ir a:** [Tema_2]
+
 # **Desarrollo TEMA 3 “Optimizacion de consultas por indices”**
 
 En las bases de datos, el rendimiento de las consultas y el tiempo de consulta de las mismas, es un factor muy importante para lo que sería la recuperación de la información. Estos tiempos de consulta y rendimiento antes mencionado irán creciendo conforme la magnitud de los datos sea mayor, y si no se tiene algún método de optimización estas consultas pueden llegar a tomar mucho tiempo. Una de las técnicas mas comunes y efectivas para mejorar el rendimiento en las consultas son los denominados índices. 
