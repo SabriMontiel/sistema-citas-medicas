@@ -295,8 +295,6 @@ El sistema tiene un alto potencial de expansión, permitiendo en el futuro agreg
 4. Articles from Revista Panamericana de Salud Pública are provided here courtesy of Pan American Health Organization.
 5. Microsoft(2024, 23 octubre). *CREATE COLUMNSTORE INDEX (Transact-SQL) - SQL Server*. Microsoft Learn. <https://learn.microsoft.com/es-es/sql/t-sql/statements/create-columnstore-index-transact-sql?view=sql-server-ver16>
 6. Mehrez, B. (2023, 1 julio). *How to Use SQL Server as a Columnar Datastore*. https://www.linkedin.com/pulse/how-use-sql-server-columnar-datastore-baligh-mehrez
-
 7.User-defined functions:[https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver16](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver16)
-
 8.Stored procedures (Database Engine):[https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver16](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver16) 
 
