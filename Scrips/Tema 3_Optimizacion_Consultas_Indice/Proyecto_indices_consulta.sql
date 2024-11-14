@@ -48,13 +48,12 @@ ON Paciente (fecha_nacimiento);
 DROP INDEX IDX_FechaNac_Paciente ON Paciente;
 
 
+CREATE CLUSTERED INDEX [IX_fecha]
+ON [dbo].[Paciente] ([fecha_nacimiento],[dni])
+    
 DROP INDEX IX_FECHA ON Paciente;
 
 
 SELECT * FROM sys.indexes
 WHERE object_id = OBJECT_ID('Paciente'); ---Muestra los index existentes
 
-
-
-CREATE CLUSTERED INDEX [IX_fecha]
-    ON [dbo].[Paciente] ([fecha_nacimiento],[dni])
