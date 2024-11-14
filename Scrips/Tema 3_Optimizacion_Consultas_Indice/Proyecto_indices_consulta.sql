@@ -41,18 +41,29 @@ ALTER TABLE Paciente DROP CONSTRAINT PK_paciente; ---Quitar PK
 
 ALTER TABLE Paciente ADD CONSTRAINT PK_paciente PRIMARY KEY (id_paciente); --Restaurar PK
 
+----Se realiza la creacion del indice agrupado
 CREATE CLUSTERED INDEX IDX_FechaNac_Paciente
 ON Paciente (fecha_nacimiento);
 
 
+----Planteo 1 para indice agrupado con varias columnas
+CREATE CLUSTERED INDEX IDX_FechaNac_Paciente
+ON Paciente (fecha_nacimiento);
+
+CREATE NONCLUSTERED INDEX IDX_FechaNac_Incluye_Columnas
+ON Paciente (fecha_nacimiento)
+INCLUDE (nombre, apellido);
+
 DROP INDEX IDX_FechaNac_Paciente ON Paciente;
 
+DROP INDEX IDX_FechaNac_Incluye_Columnas ON Paciente;
+
+----Planteo 2 para indice agrupado con varias columnas
 
 CREATE CLUSTERED INDEX [IX_fecha]
 ON [dbo].[Paciente] ([fecha_nacimiento],[dni])
-    
-DROP INDEX IX_FECHA ON Paciente;
 
+DROP INDEX IX_fecha ON Paciente;
 
 SELECT * FROM sys.indexes
 WHERE object_id = OBJECT_ID('Paciente'); ---Muestra los index existentes
